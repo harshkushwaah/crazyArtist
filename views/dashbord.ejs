@@ -1,0 +1,28 @@
+<%- include("partials/header")  -%> 
+
+<div class="hero">
+
+<div class="hero-up">
+    <div class="col-md-10 text-center pt-5">
+        <h1 class="site-heading site-animate fadeInUp site-animated">Welcome<br/> <strong class="d-block"><%=Name%></strong></h1>
+        <strong class="d-block text-white text-uppercase letter-spacing">You are a <%=Role%></strong>
+        <% if (Role == "Student") { %>
+            <div class=" btn1 text-center">
+                <a href="/allcourses"><button type="button" class="btn btn-primary btn-lg">All Courses</button></a>
+            </div>
+            <div class=" btn1 text-center">
+                <a href="/yourcourses"><button type="button" class="btn btn-primary btn-lg">Enrolled Courses</button></a>
+            </div>
+            <%} else { %>
+                <div class=" btn1 text-center">
+                    <a href="/newcourse"><button type="button" class="btn btn-primary btn-lg">Create Courses</button></a>
+                </div>
+                <div class=" btn1 text-center">
+                    <a href="/yourcourses"><button type="button" class="btn btn-primary btn-lg">Your Courses</button></a>
+                </div>
+            <% } %>
+</div>
+</div>
+</div>
+
+<%- include("partials/footer")  -%> 
